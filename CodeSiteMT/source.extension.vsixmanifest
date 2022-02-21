@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="64f3a574-29d7-4a0a-a76d-0d3ebeb9c942" Version="1.6" Language="zh-CN" Publisher="noctwolf" />
+        <DisplayName>CodeSiteMT</DisplayName>
+        <Description xml:space="preserve">CodeSite Method Tracer for VS 2017/2019</Description>
+        <ReleaseNotes>更新说明.txt</ReleaseNotes>
+        <Icon>Resources\Package.ico</Icon>
+    </Metadata>
+    <Installation InstalledByMsi="false">
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0]" />
+        <InstallationTarget Version="[15.0,17.0)" Id="Microsoft.VisualStudio.Community" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+        <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="[12.0]" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26606.0,17.0)" DisplayName="Visual Studio 核心编辑器" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[15.0.27019.1,17.0)" DisplayName="C# 和 Visual Basic" />
+    </Prerequisites>
+</PackageManifest>
